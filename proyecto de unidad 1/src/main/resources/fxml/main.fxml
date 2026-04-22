@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.crudong.controller.MainController">
+    <top>
+        <Label text="Neheacosion de civiles" style="-fx-font-size: 20px; -fx-font-weight: bold;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="15" bottom="15"/>
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <left>
+        <VBox spacing="10" prefWidth="280">
+            <padding>
+                <Insets top="10" right="15" bottom="10" left="15"/>
+            </padding>
+            <Label text="Nombre de Organización:" />
+            <TextField fx:id="txtNombre" promptText="Ej. Ayuda Plus" />
+
+            <Label text="Número de Acta Constitutiva:" />
+            <TextField fx:id="txtActa" promptText="Nº Acta..." />
+
+            <Label text="Representante Legal:" />
+            <TextField fx:id="txtRepresentante" promptText="Nombre y apellidos" />
+
+            <Label text="Objeto Social:" />
+            <TextField fx:id="txtObjetoSocial" promptText="Fines de la organización" />
+
+            <Label text="Vigencia del Registro:" />
+            <DatePicker fx:id="dpVigencia" promptText="Seleccionar fecha..." prefWidth="250" />
+
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10 0 0 0;">
+                <Button fx:id="btnGuardar" text="Guardar" onAction="#guardar" mnemonicParsing="false" />
+                <Button fx:id="btnActualizar" text="Actualizar" onAction="#actualizar" mnemonicParsing="false" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="btnEliminar" text="Eliminar" onAction="#eliminar" mnemonicParsing="false" />
+                <Button fx:id="btnLimpiar" text="Limpiar" onAction="#limpiarFormulario" mnemonicParsing="false" />
+            </HBox>
+            
+            <VBox style="-fx-padding: 30 0 0 0;" spacing="5">
+               <Label text="Leyenda de alertas de vigencia:" style="-fx-font-weight: bold;"/>
+               <Label text="• Rojo: Registro Vencido" style="-fx-text-fill: red;" />
+               <Label text="• Naranja: Por vencer (≤ 30 días)" style="-fx-text-fill: orange;" />
+            </VBox>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="tvOrganizaciones" prefWidth="550" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="120">
+                    <cellValueFactory><PropertyValueFactory property="nombre" /></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colActa" text="Nº Acta" prefWidth="80">
+                    <cellValueFactory><PropertyValueFactory property="numeroActa" /></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colRepresentante" text="Representante" prefWidth="120">
+                    <cellValueFactory><PropertyValueFactory property="representanteLegal" /></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colObjetoSocial" text="Objeto Social" prefWidth="130">
+                    <cellValueFactory><PropertyValueFactory property="objetoSocial" /></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colVigencia" text="Vigencia" prefWidth="90">
+                    <cellValueFactory><PropertyValueFactory property="vigencia" /></cellValueFactory>
+                </TableColumn>
+            </columns>
+             <BorderPane.margin>
+                <Insets right="15" bottom="15"/>
+            </BorderPane.margin>
+        </TableView>
+    </center>
+</BorderPane>
