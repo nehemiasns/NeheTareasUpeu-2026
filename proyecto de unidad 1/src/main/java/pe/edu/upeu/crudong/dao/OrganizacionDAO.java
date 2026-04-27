@@ -1,20 +1,15 @@
 package pe.edu.upeu.crudong.dao;
 
 import pe.edu.upeu.crudong.model.Organizacion;
-<<<<<<< HEAD
 import pe.edu.upeu.crudong.utils.ConnS;
 
 import java.sql.*;
-=======
-
->>>>>>> 1803918781833cc43462b40711c1c79ee20402d0
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class OrganizacionDAO {
-<<<<<<< HEAD
 
     public List<Organizacion> listarTodas() {
         List<Organizacion> organizaciones = new ArrayList<>();
@@ -67,37 +62,10 @@ public class OrganizacionDAO {
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-=======
-    private List<Organizacion> organizaciones;
-
-    public OrganizacionDAO() {
-        this.organizaciones = new ArrayList<>();
-        organizaciones.add(new Organizacion("Cruz Roja", "ACT-001", "Juan Perez", "Asistencia Humanitaria", LocalDate.now().plusMonths(6)));
-        organizaciones.add(new Organizacion("Salvemos al Planeta", "ACT-002", "Maria Lopez", "Ecologia", LocalDate.now().plusDays(15)));
-        organizaciones.add(new Organizacion("Ayuda Animal", "ACT-003", "Carlos Torres", "Proteccion Animal", LocalDate.now().minusDays(5)));
-    }
-
-    public List<Organizacion> listarTodas() {
-        return new ArrayList<>(organizaciones);
-    }
-
-    public void agregar(Organizacion org) {
-        organizaciones.add(org);
-    }
-
-    public void actualizar(String id, Organizacion orgActualizada) {
-        for (int i = 0; i < organizaciones.size(); i++) {
-            if (organizaciones.get(i).getId().equals(id)) {
-                orgActualizada.setId(id);
-                organizaciones.set(i, orgActualizada);
-                return;
-            }
->>>>>>> 1803918781833cc43462b40711c1c79ee20402d0
         }
     }
 
     public void eliminar(String id) {
-<<<<<<< HEAD
         String sql = "DELETE FROM organizaciones WHERE id = ?";
         try (Connection conn = ConnS.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -129,14 +97,5 @@ public class OrganizacionDAO {
             e.printStackTrace();
         }
         return Optional.empty();
-=======
-        organizaciones.removeIf(org -> org.getId().equals(id));
-    }
-
-    public Optional<Organizacion> buscarPorId(String id) {
-        return organizaciones.stream()
-            .filter(org -> org.getId().equals(id))
-            .findFirst();
->>>>>>> 1803918781833cc43462b40711c1c79ee20402d0
     }
 }
