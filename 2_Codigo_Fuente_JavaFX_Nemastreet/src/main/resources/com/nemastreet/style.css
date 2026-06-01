@@ -1,0 +1,640 @@
+.root {
+    -fx-background-color: #0a0a0a;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+}
+
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.subtitle-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #a0a0a0;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #666666;
+    -fx-border-color: #333333;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+/* ESTILOS PREMIUM E-COMMERCE (NEMASTREET) */
+.main-background {
+    -fx-background-color: #121418;
+}
+
+.top-navbar {
+    -fx-background-color: #1c1f26;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #2a2d35;
+}
+
+.logo-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+}
+
+.nav-link {
+    -fx-text-fill: #8b92a5;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.nav-link:hover {
+    -fx-text-fill: white;
+}
+
+.nav-link-active {
+    -fx-text-fill: #f93a3a;
+}
+
+.icon-label {
+    -fx-text-fill: #8b92a5;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.btn-cart-nav {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btn-secondary-dark {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8b92a5;
+    -fx-border-color: #8b92a5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+.btn-secondary-dark:hover {
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+.left-sidebar {
+    -fx-background-color: #121418;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #2a2d35;
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}
+
+.sidebar-item {
+    -fx-text-fill: #8b92a5;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+.sidebar-item:hover {
+    -fx-text-fill: white;
+}
+.sidebar-item-active {
+    -fx-text-fill: #f93a3a;
+}
+
+.sidebar-title-dropdown {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 15 0 15 0;
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: #2a2d35;
+    -fx-cursor: hand;
+}
+
+.footer-info {
+    -fx-padding: 20 0 0 0;
+}
+
+.footer-title {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.footer-text {
+    -fx-text-fill: #5a6072;
+    -fx-font-size: 12px;
+}
+
+.center-content {
+    -fx-background-color: #121418;
+}
+
+.search-field {
+    -fx-background-color: #1c1f26;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15 8 15;
+    -fx-border-color: #2a2d35;
+    -fx-border-radius: 5;
+}
+
+.filter-text {
+    -fx-text-fill: #8b92a5;
+    -fx-font-size: 13px;
+}
+
+.btn-filter {
+    -fx-background-color: #1c1f26;
+    -fx-text-fill: white;
+    -fx-border-color: #2a2d35;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-cursor: hand;
+}
+.btn-filter:hover {
+    -fx-background-color: #2a2d35;
+}
+
+.catalog-scroll {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-border-color: transparent;
+}
+.catalog-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.product-card-premium {
+    -fx-background-color: #1c1f26;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+.product-card-premium:hover {
+    -fx-background-color: #232730;
+}
+
+.product-title-premium {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.product-sizes {
+    -fx-text-fill: #8b92a5;
+    -fx-font-size: 12px;
+}
+
+.product-price-premium {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.btn-add-cart {
+    -fx-background-color: #f93a3a;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-cursor: hand;
+}
+.btn-add-cart:hover {
+    -fx-background-color: #ff5252;
+}
+
+.image-container {
+    -fx-background-color: #121418;
+    -fx-background-radius: 8;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #ff2a2a;
+}
+
+/* ESTILOS PARA POPUPS Y DIALOGS EN MODO OSCURO */
+.dialog-pane {
+    -fx-background-color: #1c1f26;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #121418;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: #8b92a5;
+    -fx-font-size: 13px;
+}
+
+.dialog-pane .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: #5a6072;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 8 15 8 15;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #2a2d35;
+    -fx-border-color: white;
+}
+
+.dialog-pane .text-field {
+    -fx-background-color: #121418;
+    -fx-text-fill: white;
+    -fx-border-color: #2a2d35;
+    -fx-border-radius: 4;
+}
+
+/* ESTILOS PARA EL COMBOBOX DE TALLA */
+.combo-talla {
+    -fx-background-color: #121418;
+    -fx-border-color: #2a2d35;
+    -fx-border-radius: 4;
+}
+
+.combo-talla .list-cell {
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #121418;
+    -fx-border-color: #2a2d35;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #121418;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: #2a2d35;
+    -fx-text-fill: white;
+}
+
+.btn-primary {
+    -fx-background-color: #ff2a2a;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #cc0000;
+}
+
+.btn-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #555555;
+    -fx-border-radius: 4;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-border-color: #ff2a2a;
+    -fx-text-fill: #ff2a2a;
+}
+
+/* Estilos para el producto en el catálogo */
+.product-card {
+    -fx-background-color: #141414;
+    -fx-border-color: #222222;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 5);
+}
+
+.price-label {
+    -fx-text-fill: #ff2a2a;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+/* HERO BANNER */
+.hero-banner {
+    -fx-background-color: linear-gradient(to right, #1c1f26, #2a2d35);
+    -fx-background-radius: 12;
+    -fx-padding: 40;
+    -fx-border-color: #3b3f4a;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+.hero-title {
+    -fx-text-fill: white;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+.hero-subtitle {
+    -fx-text-fill: #8b92a5;
+    -fx-font-size: 15px;
+}
+.hero-btn {
+    -fx-background-color: #ff2a2a;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 25 10 25;
+    -fx-background-radius: 30;
+    -fx-cursor: hand;
+}
+.hero-btn:hover {
+    -fx-background-color: #ff4a4a;
+}
+
+/* ADMIN TAB PANE STYLING */
+.tab-pane {
+    -fx-background-color: transparent;
+}
+.tab-pane .tab-header-area {
+    -fx-padding: 10 0 10 0;
+}
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+.tab-pane .tab {
+    -fx-background-color: #2a2d35;
+    -fx-background-radius: 8 8 0 0;
+    -fx-padding: 8 20 8 20;
+    -fx-cursor: hand;
+}
+.tab-pane .tab:selected {
+    -fx-background-color: #ff2a2a;
+}
+.tab-pane .tab .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+.tab-pane .tab-content-area {
+    -fx-background-color: #141414;
+    -fx-border-color: #3b3f4a;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Estilos para la tabla del Admin */
+.table-view {
+    -fx-background-color: #141414;
+    -fx-border-color: #333333;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1a1a1a;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #a0a0a0;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #141414;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: transparent transparent #222222 transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #1a1a1a;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #ff2a2a;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .cell {
+    -fx-text-fill: #ffffff;
+}
+
+/* ESTILOS NUEVOS PARA EL LOGIN PREMIUM */
+.login-root {
+    -fx-background-image: url("images/login_bg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.login-box {
+    -fx-background-color: rgba(26, 28, 33, 0.7);
+    -fx-background-radius: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 30, 0, 0, 15);
+}
+
+.login-input {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #6b7280;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15 20 15 20;
+    -fx-font-size: 14px;
+}
+
+.login-input:focused {
+    -fx-border-color: #ff4757;
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-login {
+    -fx-background-color: linear-gradient(to right, #ff4757, #e84118);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 71, 87, 0.4), 15, 0, 0, 5);
+}
+
+.btn-login:hover {
+    -fx-background-color: linear-gradient(to right, #ff6b81, #ff4757);
+}
+
+.login-link {
+    -fx-text-fill: #a0aabf;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+.login-link:hover {
+    -fx-text-fill: white;
+    -fx-underline: true;
+}
+
+/* ADMIN PORTAL MODERN V2.1 */
+.admin-panel-container {
+    -fx-background-color: #1a1c23;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-border-color: #2a2d35;
+    -fx-border-radius: 8;
+}
+
+.admin-toolbar {
+    -fx-padding: 0 0 15 0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #2a2d35;
+}
+
+.admin-panel-title {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 5 0;
+}
+
+.btn-refresh {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a0aabf;
+    -fx-border-color: #3b3f4a;
+    -fx-border-radius: 6;
+    -fx-padding: 8 15 8 15;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.btn-refresh:hover {
+    -fx-background-color: #2a2d35;
+    -fx-text-fill: white;
+}
+
+.btn-add-new {
+    -fx-background-color: #2a4365;
+    -fx-text-fill: #90cdf4;
+    -fx-border-color: #2c5282;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 20 8 20;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.btn-add-new:hover {
+    -fx-background-color: #2b6cb0;
+    -fx-text-fill: white;
+}
+
+.table-view-modern {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view-modern .column-header-background {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #2a2d35;
+}
+
+.table-view-modern .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 10 0 10 0;
+}
+
+.table-view-modern .column-header .label {
+    -fx-text-fill: #8b92a5;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+}
+
+.table-view-modern .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: transparent transparent #2a2d35 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 50px;
+}
+
+.table-view-modern .table-row-cell:hover {
+    -fx-background-color: #232730;
+}
+
+.table-view-modern .table-row-cell:selected {
+    -fx-background-color: #2a2d35;
+}
+
+.table-view-modern .cell {
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+}
+
+/* Pills and Buttons */
+.pill-admin {
+    -fx-background-color: #22543d;
+    -fx-text-fill: #68d391;
+    -fx-font-weight: bold;
+    -fx-padding: 4 12 4 12;
+    -fx-background-radius: 15;
+    -fx-font-size: 11px;
+}
+
+.pill-client {
+    -fx-background-color: #2a4365;
+    -fx-text-fill: #90cdf4;
+    -fx-font-weight: bold;
+    -fx-padding: 4 12 4 12;
+    -fx-background-radius: 15;
+    -fx-font-size: 11px;
+}
+
+.btn-action-edit {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a0aabf;
+    -fx-border-color: #3b3f4a;
+    -fx-border-radius: 4;
+    -fx-padding: 5 12 5 12;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+.btn-action-edit:hover {
+    -fx-background-color: #2a2d35;
+    -fx-text-fill: white;
+}
+
+.btn-action-delete {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ff4757;
+    -fx-border-color: #4a1f24;
+    -fx-border-radius: 4;
+    -fx-padding: 5 12 5 12;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+.btn-action-delete:hover {
+    -fx-background-color: #ff4757;
+    -fx-text-fill: white;
+}

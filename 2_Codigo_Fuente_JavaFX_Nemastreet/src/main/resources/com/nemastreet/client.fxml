@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane styleClass="main-background" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nemastreet.controllers.ClientController">
+    <!-- TOP NAVBAR -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="30" styleClass="top-navbar">
+            <padding><Insets top="15" right="30" bottom="15" left="30"/></padding>
+            <Label text="NEMASTREET" styleClass="logo-text" />
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label text="INICIO" style="-fx-text-fill: #ff2a2a; -fx-font-weight: bold; -fx-cursor: hand;" />
+            </HBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox spacing="20" alignment="CENTER_RIGHT">
+                <Label text="🔍 BUSCAR" styleClass="icon-label" />
+                <Button fx:id="btnCart" onAction="#handleOpenCart" text="🛒 CARRITO (0)" styleClass="btn-cart-nav" />
+                <Label text="👤 MI CUENTA" styleClass="icon-label" />
+                <Button onAction="#logout" text="CERRAR SESIÓN" styleClass="btn-secondary-dark" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox spacing="25" styleClass="left-sidebar" prefWidth="250">
+            <padding><Insets top="30" right="20" bottom="30" left="30"/></padding>
+            <VBox spacing="10">
+                <Label text="COLECCIÓN" styleClass="sidebar-title" />
+                <Label fx:id="lblTodo" text="Todo" styleClass="sidebar-item, sidebar-item-active" onMouseClicked="#filterTodo" />
+                <Label fx:id="lblSudaderas" text="Sudaderas" styleClass="sidebar-item" onMouseClicked="#filterSudaderas" />
+                <Label fx:id="lblCamisetas" text="Camisetas" styleClass="sidebar-item" onMouseClicked="#filterCamisetas" />
+                <Label fx:id="lblChaquetas" text="Chaquetas" styleClass="sidebar-item" onMouseClicked="#filterChaquetas" />
+                <Label fx:id="lblNovedades" text="Novedades" styleClass="sidebar-item" onMouseClicked="#filterNovedades" />
+            </VBox>
+            <VBox spacing="10">
+                <Label text="TALLA" styleClass="sidebar-title" />
+                <javafx.scene.control.ComboBox fx:id="sideComboTalla" promptText="Seleccionar Talla" styleClass="combo-talla" prefWidth="190" />
+                
+                <Label text="COLOR" styleClass="sidebar-title" />
+                <javafx.scene.control.ComboBox fx:id="sideComboColor" promptText="Seleccionar Color" styleClass="combo-talla" prefWidth="190" />
+                
+                <Label text="PRECIO" styleClass="sidebar-title" />
+                <javafx.scene.control.ComboBox fx:id="sideComboPrecio" promptText="Rango de Precio" styleClass="combo-talla" prefWidth="190" />
+            </VBox>
+            <Region VBox.vgrow="ALWAYS" />
+            <VBox spacing="5" styleClass="footer-info">
+                <Label text="info" styleClass="footer-title" />
+                <Label text="© 2026 Nemastreet" styleClass="footer-text" />
+                <Label text="Términos   Soporte" styleClass="footer-text" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- CENTER CATALOG -->
+    <center>
+        <VBox spacing="20" styleClass="center-content">
+            <padding><Insets top="20" right="30" bottom="30" left="20"/></padding>
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <TextField fx:id="searchField" promptText="🔍 Buscar prenda..." styleClass="search-field" prefWidth="300" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Label text="FILTRAR:" styleClass="filter-text" />
+                <javafx.scene.control.ComboBox fx:id="topComboTalla" promptText="TALLA" styleClass="combo-talla" />
+                <javafx.scene.control.ComboBox fx:id="topComboColor" promptText="COLOR" styleClass="combo-talla" />
+                <javafx.scene.control.ComboBox fx:id="comboSort" promptText="ORDENAR" styleClass="combo-talla" />
+            </HBox>
+            
+            <!-- Main Content Area -->
+        <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="catalog-scroll">
+            <VBox spacing="25">
+                <padding><Insets top="10" right="20" bottom="20" left="20"/></padding>
+                
+                <!-- HERO BANNER FUNCIONAL -->
+                <StackPane fx:id="heroBanner" styleClass="hero-banner" onMouseClicked="#filterNovedades">
+                    <VBox alignment="CENTER" spacing="15">
+                        <Label text="COLECCIÓN URBAN FW26" styleClass="hero-title" />
+                        <Label text="Descubre las prendas oversize que marcan tendencia. Envío gratis en tu primera compra." styleClass="hero-subtitle" />
+                    </VBox>
+                </StackPane>
+                
+                <!-- Catálogo de Productos -->
+                <FlowPane fx:id="catalogFlowPane" hgap="25" vgap="30" alignment="CENTER" />
+            </VBox>
+        </ScrollPane>
+        </VBox>
+    </center>
+</BorderPane>

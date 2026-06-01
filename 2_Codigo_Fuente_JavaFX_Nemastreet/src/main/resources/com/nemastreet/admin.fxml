@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.StackPane?>
+
+<VBox style="-fx-background-color: #121418;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nemastreet.controllers.AdminController">
+    <!-- BARRA SUPERIOR (HEADER) -->
+    <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #1c1f26; -fx-padding: 15 25 15 25; -fx-border-width: 0 0 1 0; -fx-border-color: #2a2d35;">
+        <Label text="≡" style="-fx-text-fill: #8b92a5; -fx-font-size: 24px; -fx-cursor: hand;" />
+        <Label text="PORTAL DE ADMINISTRADOR" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px; -fx-letter-spacing: 1px;" />
+        <javafx.scene.layout.Region HBox.hgrow="ALWAYS" />
+        <Button onAction="#logout" text="CERRAR SESIÓN ⮞" styleClass="btn-secondary-dark" style="-fx-border-color: transparent; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <VBox spacing="20.0" VBox.vgrow="ALWAYS" style="-fx-padding: 30 40 30 40;">
+        <Label text="GESTIÓN DEL SISTEMA (CRUD)" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <TabPane VBox.vgrow="ALWAYS" tabClosingPolicy="UNAVAILABLE" styleClass="tab-pane">
+            <!-- PESTAÑA USUARIOS -->
+            <Tab text="Usuarios">
+                <VBox spacing="15" styleClass="admin-panel-container">
+                    <HBox alignment="CENTER_LEFT" spacing="15" styleClass="admin-toolbar">
+                        <VBox>
+                            <Label text="PANEL DE USUARIOS" styleClass="admin-panel-title" />
+                            <javafx.scene.control.TextField promptText="Buscar usuarios..." styleClass="search-field" prefWidth="250" />
+                        </VBox>
+                        <VBox>
+                            <Label text="FILTRAR POR ROL" styleClass="filter-text" />
+                            <javafx.scene.control.ComboBox promptText="Todos los roles" styleClass="combo-talla" prefWidth="150" />
+                        </VBox>
+                        <javafx.scene.layout.Region HBox.hgrow="ALWAYS" />
+                        <Button text="↻ ACTUALIZAR" onAction="#initialize" styleClass="btn-refresh" />
+                        <Button text="+ AÑADIR USUARIO" onAction="#handleCreateUsuario" styleClass="btn-add-new" />
+                    </HBox>
+                    <TableView fx:id="tablePersonas" VBox.vgrow="ALWAYS" styleClass="table-view-modern">
+                        <columns>
+                            <TableColumn text="ID" prefWidth="80"><cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory></TableColumn>
+                            <TableColumn text="NOMBRE" prefWidth="250"><cellValueFactory><PropertyValueFactory property="nombre" /></cellValueFactory></TableColumn>
+                            <TableColumn text="EMAIL" prefWidth="250"><cellValueFactory><PropertyValueFactory property="email" /></cellValueFactory></TableColumn>
+                            <TableColumn fx:id="colRol" text="ROL" prefWidth="150"><cellValueFactory><PropertyValueFactory property="rol" /></cellValueFactory></TableColumn>
+                            <TableColumn fx:id="colAccionesUsu" text="ACCIONES" prefWidth="250" sortable="false" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+
+            <!-- PESTAÑA INVENTARIO -->
+            <Tab text="Inventario (Prendas)">
+                <VBox spacing="15" styleClass="admin-panel-container">
+                    <HBox alignment="CENTER_LEFT" spacing="15" styleClass="admin-toolbar">
+                        <VBox>
+                            <Label text="PANEL DE INVENTARIO" styleClass="admin-panel-title" />
+                            <javafx.scene.control.TextField promptText="Buscar prendas..." styleClass="search-field" prefWidth="250" />
+                        </VBox>
+                        <javafx.scene.layout.Region HBox.hgrow="ALWAYS" />
+                        <Button text="↻ ACTUALIZAR" onAction="#initialize" styleClass="btn-refresh" />
+                        <Button text="+ AÑADIR PRENDA" onAction="#handleCreateProducto" styleClass="btn-add-new" />
+                    </HBox>
+                    <TableView fx:id="tableProductos" VBox.vgrow="ALWAYS" styleClass="table-view-modern">
+                        <columns>
+                            <TableColumn text="ID" prefWidth="60"><cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory></TableColumn>
+                            <TableColumn fx:id="colImagen" text="IMAGEN" prefWidth="100" sortable="false"><cellValueFactory><PropertyValueFactory property="imagenUrl" /></cellValueFactory></TableColumn>
+                            <TableColumn text="NOMBRE PRENDA" prefWidth="300"><cellValueFactory><PropertyValueFactory property="nombre" /></cellValueFactory></TableColumn>
+                            <TableColumn fx:id="colPrecio" text="PRECIO" prefWidth="120"><cellValueFactory><PropertyValueFactory property="precio" /></cellValueFactory></TableColumn>
+                            <TableColumn text="STOCK" prefWidth="100"><cellValueFactory><PropertyValueFactory property="stock" /></cellValueFactory></TableColumn>
+                            <TableColumn fx:id="colAccionesProd" text="ACCIONES" prefWidth="250" sortable="false" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+            
+            <!-- PESTAÑA PROVEEDORES -->
+            <Tab text="Proveedores">
+                <VBox spacing="15" styleClass="admin-panel-container">
+                    <HBox alignment="CENTER_LEFT" spacing="15" styleClass="admin-toolbar">
+                        <VBox>
+                            <Label text="PANEL DE PROVEEDORES" styleClass="admin-panel-title" />
+                            <javafx.scene.control.TextField promptText="Buscar proveedor..." styleClass="search-field" prefWidth="250" />
+                        </VBox>
+                        <javafx.scene.layout.Region HBox.hgrow="ALWAYS" />
+                        <Button text="↻ ACTUALIZAR" onAction="#initialize" styleClass="btn-refresh" />
+                        <Button text="+ AÑADIR PROVEEDOR" onAction="#handleCreateProveedor" styleClass="btn-add-new" />
+                    </HBox>
+                    <TableView fx:id="tableProveedores" VBox.vgrow="ALWAYS" styleClass="table-view-modern">
+                        <columns>
+                            <TableColumn text="ID" prefWidth="80"><cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory></TableColumn>
+                            <TableColumn text="EMPRESA" prefWidth="250"><cellValueFactory><PropertyValueFactory property="nombreEmpresa" /></cellValueFactory></TableColumn>
+                            <TableColumn text="CONTACTO" prefWidth="250"><cellValueFactory><PropertyValueFactory property="contacto" /></cellValueFactory></TableColumn>
+                            <TableColumn text="TELÉFONO" prefWidth="200"><cellValueFactory><PropertyValueFactory property="telefono" /></cellValueFactory></TableColumn>
+                            <TableColumn fx:id="colAccionesProv" text="ACCIONES" prefWidth="250" sortable="false" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+
+        </TabPane>
+    </VBox>
+</VBox>

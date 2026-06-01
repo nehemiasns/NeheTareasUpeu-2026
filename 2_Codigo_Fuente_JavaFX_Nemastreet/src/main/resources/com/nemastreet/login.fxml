@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane styleClass="login-root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nemastreet.controllers.LoginController">
+    <!-- Capa de oscurecimiento si hay imagen de fondo -->
+    <VBox style="-fx-background-color: rgba(0,0,0,0.4);" />
+    
+    <VBox alignment="CENTER" spacing="30.0">
+        
+        <!-- Contenedor del Logo (Texto en este caso) -->
+        <VBox alignment="CENTER" spacing="-5.0">
+            <Label text="Nemastreet" style="-fx-text-fill: white; -fx-font-size: 42px; -fx-font-weight: bold; -fx-font-family: 'Serif';" />
+            <Label text="Oversize Fashion" style="-fx-text-fill: #cccccc; -fx-font-size: 14px; -fx-letter-spacing: 2px;" />
+        </VBox>
+
+        <!-- Caja de Login tipo Glassmorphism -->
+        <VBox styleClass="login-box" spacing="20.0" maxWidth="450" alignment="CENTER">
+            <padding>
+                <Insets top="40.0" right="50.0" bottom="40.0" left="50.0"/>
+            </padding>
+            
+            <VBox alignment="CENTER" spacing="5.0">
+                <Label text="Iniciar Sesión" style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
+                <Label text="Accede a tu cuenta de Nemastreet" style="-fx-text-fill: #a0aabf; -fx-font-size: 13px;" />
+            </VBox>
+
+            <VBox spacing="25.0" style="-fx-padding: 20 0 0 0;">
+                
+                <!-- Input Usuario -->
+                <VBox spacing="8.0">
+                    <Label text="Usuario o Correo Electrónico" style="-fx-text-fill: #d1d5db; -fx-font-size: 13px;" />
+                    <TextField fx:id="txtUser" promptText="ejemplo@correo.com" styleClass="login-input" />
+                </VBox>
+                
+                <!-- Input Contraseña -->
+                <VBox spacing="8.0">
+                    <Label text="Contraseña" style="-fx-text-fill: #d1d5db; -fx-font-size: 13px;" />
+                    <PasswordField fx:id="txtPassword" promptText="••••••••" styleClass="login-input" />
+                    <HBox alignment="CENTER_RIGHT">
+                        <Label text="¿Olvidaste tu contraseña?" styleClass="login-link" />
+                    </HBox>
+                </VBox>
+                
+                <Label fx:id="lblError" textFill="#ff4757" wrapText="true" alignment="CENTER" maxWidth="Infinity" />
+
+                <!-- Botón Ingresar -->
+                <Button onAction="#login" text="INGRESAR" styleClass="btn-login" maxWidth="Infinity" prefHeight="50"/>
+                
+                <VBox alignment="CENTER" spacing="15.0">
+                    <CheckBox text="Mantener sesión iniciada" styleClass="login-checkbox" />
+                    <Label text="¿No tienes cuenta? Regístrate aquí" styleClass="login-link" />
+                </VBox>
+                
+            </VBox>
+        </VBox>
+    </VBox>
+</StackPane>
